@@ -20,13 +20,11 @@ cp -r skills/cozi ~/.openclaw/skills/cozi
 
 ### Dependencies
 
-Install the [py-cozi](https://github.com/Wetzel402/py-cozi) Python package:
+Install the [patched fork of py-cozi](https://github.com/eski009/py-cozi) (fixes several bugs in the upstream version):
 
 ```bash
-pip3 install py-cozi
+pip3 install git+https://github.com/eski009/py-cozi.git
 ```
-
-> **Note:** The published version of py-cozi requires a patch for Cozi's updated API. The skill's setup instructions include an auto-patching script — see `skills/cozi/SKILL.md` for details.
 
 ### Configuration
 
@@ -50,7 +48,7 @@ Add your Cozi credentials to your OpenClaw config (`~/.openclaw/openclaw.json`):
 
 ## Credits
 
-This skill wraps [py-cozi](https://github.com/Wetzel402/py-cozi), an unofficial Python wrapper for the Cozi API by [Cody Wetzel](https://github.com/Wetzel402).
+This skill wraps [py-cozi](https://github.com/Wetzel402/py-cozi), an unofficial Python wrapper for the Cozi API originally created by [Cody Wetzel](https://github.com/Wetzel402). This project uses a [patched fork](https://github.com/eski009/py-cozi) that fixes API key authentication, missing awaits in retry logic, and bugs in `edit_appointment`.
 
 ## License
 
